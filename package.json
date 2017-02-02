@@ -1,0 +1,42 @@
+{
+    "name": "surgipallib",
+    "version": "0.1.2",
+    "scripts": {
+        "lint": "tslint src/**/*.ts",
+        "test": "tsc && karma start",
+        "postinstall": "typings install",
+        "prepublish": "tsc",
+        "tsc": "tsc",
+        "typings": "typings"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rthiney/surgipallib"
+    },
+    "author": {
+        "name": "Raphael Thineny",
+        "email": "raphael@surgipal.com"
+    },
+    "keywords": [
+        "azure",
+        "angular2"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rthiney/surgipallib"
+    },
+    "main": "./dist/index.js",
+    "typings": "./dist/index.d.ts",
+    "dependencies": {},
+    "devDependencies": {
+        "@angular/common": "^2.4.5",
+        "@angular/core": "^2.4.5",
+        "@angular/http": "^2.4.5",
+        "codelyzer": "^2.0.0-beta.4",
+        "rxjs": "5.1.0",
+        "tslint": "^4.4.2",
+        "typescript": "2.1.5",
+        "typings": "^2.1.0",
+        "zone.js": "0.7.6"
+    }
+}
