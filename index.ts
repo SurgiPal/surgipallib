@@ -1,35 +1,48 @@
-import {NgModule, ModuleWithProviders} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {SurgiPalComponent} from './src/sample.component';
-import {SampleDirective} from './src/sample.directive';
-import {SamplePipe} from './src/sample.pipe';
-import {SampleService} from './src/sample.service';
+import { NgModule, ModuleWithProviders, enableProdMode} from '@angular/core';
+import {  GloveService, GloveComponent } from './src/glove';
+import {  GownService, GownComponent } from './src/gown';
+import {  CountryService } from './src/country';
+import {  SpecialityService } from './src/speciality';
+import { ParamDropdownComponent } from './src/shared/components';
+import { CommonModule } from '@angular/common';
+import { SampleDirective } from './src/sample.directive';
+import { SamplePipe } from './src/sample.pipe';
+import { environment } from './src/environments/environment';
 import 'rxjs/Rx';
-export * from './src/sample.component';
+import 'rxjs/add/operator/toPromise';
+export * from './src/models';
+export * from './src/shared/components';
+export * from './src/glove';
+export * from './src/gown';
+export * from './src/country';
+export * from './src/speciality';
 export * from './src/sample.directive';
 export * from './src/sample.pipe';
-export * from './src/sample.service';
-export * from './src/models';
+if (environment.production) {
+  enableProdMode();
+}
+
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    SurgiPalComponent,
+    ParamDropdownComponent,
+    GownComponent,
     SampleDirective,
     SamplePipe
   ],
   exports: [
-    SurgiPalComponent,
+    ParamDropdownComponent, GownComponent,
     SampleDirective,
     SamplePipe
   ]
 })
-export class SampleModule {
+export class SurgiDataModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: SampleModule,
-      providers: [SampleService]
+      ngModule: SurgiDataModule,
+      providers: [GloveService, GownService, CountryService, SpecialityService]
     };
   }
 }

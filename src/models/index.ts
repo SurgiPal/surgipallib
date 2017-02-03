@@ -1,1 +1,1 @@
-export * from './Glove';
+export * from './paramModels';
