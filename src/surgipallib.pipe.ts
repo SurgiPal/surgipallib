@@ -7,7 +7,7 @@ import {Injectable, PipeTransform, Pipe} from '@angular/core';
   name: 'samplePipe'
 })
 @Injectable()
-export class SamplePipe implements PipeTransform {
+export class SurgipalLibPipe implements PipeTransform {
   transform(value: any, args: any[] = null): string {
     return value;
   }

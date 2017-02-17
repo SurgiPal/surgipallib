@@ -1,6 +1,6 @@
 {
     "name": "surgipallib",
-    "version": "0.1.5",
+    "version": "0.1.9",
     "scripts": {
         "lint": "tslint src/**/*.ts",
         "test": "tsc && karma start",
@@ -29,17 +29,22 @@
     "typings": "./dist/index.d.ts",
     "dependencies": {},
     "devDependencies": {
-        "@types/node": "^6.0.42",
-        "@angular/common": "^2.4.5",
-        "@angular/core": "^2.4.5",
-        "@angular/http": "^2.4.5",
+"angular-applicationinsights": "latest",
+        "@angular/common": "^2.4.6",
+        "@angular/core": "^2.4.6",
+        "@angular/http": "^2.4.6",
+        "@angular/router": "^3.4.6",
+      "angular2-jwt": "^0.1.25",
+                "@types/node": "7.0.4",
         "codelyzer": "^2.0.0-beta.4",
+        "karma": "^1.4.1",
         "rxjs": "5.1.0",
+        "ts-helpers": "1.1.2",
+        "reflect-metadata": "0.1.9",
+        "ts-node": "1.2.1",
         "tslint": "^4.4.2",
         "typescript": "2.1.5",
-        "typings": "^2.1.0",
-        "ts-node": "1.2.1",
-        "ts-helpers": "^1.1.2",
+        "typings": "2.1.0",
         "zone.js": "0.7.6"
     }
 }
